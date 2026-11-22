@@ -3,7 +3,6 @@
     <img src="https://img.shields.io/badge/Scala-3-DC322F?style=flat-square&logo=scala&logoColor=white" alt="Scala 3" />
     <img src="https://img.shields.io/badge/Scala_CLI-Compilaci%C3%B3n-333333?style=flat-square" alt="Scala CLI" />
     <img src="https://img.shields.io/badge/GitHub-Codespaces-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Codespaces" />
-  </p>
 </div>
 
 ## Información académica
@@ -82,12 +81,12 @@ El cifrado César desplaza cada letra un número determinado de posiciones en el
 
 La expresión matemática para cifrar es:
 
-$$E(x,k) = (\operatorname{pos}(x)+k)\bmod 26$$
+$$E(x,k) = (pos(x)+k)\bmod 26$$
 
 | Símbolo | Significado |
 | :---: | :--- |
 | $x$ | Carácter original. |
-| $\operatorname{pos}(x)$ | Posición de la letra en el alfabeto. |
+| $pos(x)$ | Posición de la letra en el alfabeto. |
 | $k$ | Clave que determina el desplazamiento. |
 | $26$ | Cantidad de letras utilizadas en el alfabeto. |
 
@@ -105,7 +104,7 @@ El módulo permite regresar al inicio del alfabeto cuando se supera la última l
 
 Para descifrar se invierte el desplazamiento:
 
-$$D(y,k)=(\operatorname{pos}(y)-k)\bmod 26$$
+$$D(y,k)=(pos(y)-k)\bmod 26$$
 
 En Scala se implementó el cálculo de la siguiente manera:
 
@@ -121,7 +120,7 @@ La variable `base` corresponde a `'A'` o `'a'` según el tipo de letra. Se utili
 
 XOR (Exclusive OR) es una operación lógica que compara dos bits. Devuelve 1 cuando son diferentes y 0 cuando coinciden. En este algoritmo, la clave es un número que se combina con el valor ASCII de cada carácter.
 
-$$E(x,k)=\operatorname{ASCII}(x)\oplus k$$
+$$E(x,k)=ASCII(x)\oplus k$$
 
 | Bit A | Bit B | A XOR B |
 | :---: | :---: | :---: |
